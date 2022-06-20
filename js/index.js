@@ -1,12 +1,14 @@
 //Bienvenido WEB 
 alert ("Hola, gracias por visitarnos!")
 
-//PRODUCTOS -obj
+//Clase Expansion
 class Expansion {
-    constructor (nombre, precio) {
+    constructor (nombre, precio, anio) {
     this.nombre = nombre;
     this.precio = precio;
+    this.anio = anio;
     }
+//Informacion, descuento y precio de las Expansiones
     Info(){
         return this.nombre + " $" + this.precio
     }
@@ -18,30 +20,30 @@ class Expansion {
         return  "$ " + this.precio
     }
 }
-const expansionUniv = new Expansion ("Vida de Universidad", 1500);
-const expansionFama = new Expansion ("Rumbo a la Fama", 1550); 
-const expansionIsla = new Expansion ("Vida en la Isla", 1700);
-const packCine = new Expansion ("Noche de Cine", 900);
-const packMascota = new Expansion ("Mascotas", 1050);
-const packMsch = new Expansion ("Moschino", 870);
+//OBJETOS - Expansiones
+const expansionUniv = new Expansion ("Vida de Universidad", 1500, 2017);
+const expansionFama = new Expansion ("Rumbo a la Fama", 1550,2018); 
+const expansionIsla = new Expansion ("Vida en la Isla", 1700,2020);
+const packCine = new Expansion ("Noche de Cine", 900, 2019);
+const packMascota = new Expansion ("Mascotas", 1050, 2021);
+const packMsch = new Expansion ("Moschino", 870,2017);
 
 
-//SOLICITAR usuario 
-let usuario1 = prompt ("Quieres ver nuestras Expansiones y Packs de Accesorios? \n1.Si \n2.No");
-let usuario2 = undefined;
+//Solicito al usuario 
+let entrada1 = prompt ("Quieres ver nuestras Expansiones y Packs de Accesorios? \n1.Si \n2.No");
+let entrada2 = undefined;
 
-//MOSTRAR EXPANSIONES Y PACKS 
-if ((usuario1 == "si") || (usuario1 == "1") || (usuario1 == "Si")    ){
+if ((entrada1 == "si") || (entrada1 == "1") || (entrada1 == "Si")    ){
     mostrarExp();
-}else if ((usuario1 == 2) || (usuario1 == "no") || (usuario1 == "No" )) {
+}else if ((entrada1 == 2) || (entrada1 == "no") || (entrada1 == "No" )) {
     alert ("Gracias por visitarnos! Adios.");
 } else {
     alert ("ERROR! No es válido")
-    usuario1 =  +prompt ("Quieres ver nuestras Expansiones y Packs de Accesorios? \n1.Si \n2.No");
+    entrada1 =  +prompt ("Quieres ver nuestras Expansiones y Packs de Accesorios? \n1.Si \n2.No");
 }
-
+//MOSTRAR INFO EXPANSIONES Y PACKS 
 function mostrarExp () {
-usuario2 = +prompt(`Selecciona la Expansion o Pack que desees:\n
+entrada2 = +prompt(`Selecciona la Expansion o Pack que desees:\n
 1-${expansionUniv.Info()}\n
 2-${expansionFama.Info()}\n
 3-${expansionIsla.Info()}\n
@@ -49,26 +51,21 @@ usuario2 = +prompt(`Selecciona la Expansion o Pack que desees:\n
 5-${packMsch.Info()}\n
 Sorpresa! La Expansion: Vida de Universidad tiene un descuento`);
 }
-//DESCUENTO 
-
-if (usuario2 == 1){
-    let usuario2 = prompt ("Aplica el descuento con el codigo SIMMER2022");
-    if (usuario2 == "SIMMER2022") 
-        alert (expansionUniv.Descuento());
+//DESCUENTO Y CARRITO DE COMPRAS.
+if (entrada2 == 1){
+    let entrada2 = prompt ("Aplica el descuento con el codigo SIMMER2022");
+    if (entrada2 == "SIMMER2022") 
+        alert (expansionUniv.Descuento() + " Gracias por tu compra!");
     }
-    else if ((usuario2>= 2) && (usuario2 <=5)){
+    else if ((entrada2>= 2) && (entrada2 <=5)){
         let usuario3 = prompt("Muy buena elección! Quieres añadir el Pack Mascotas al carrito? \n1.Si \n2.No")
         if (usuario3 == 1) {
-            alert ("Se añadió"+ agregarPack())
+            alert ("Se añadió "+ packMascota.Info()+ " al carrito.")
+        }
+        else if (usuario3 == 2) {
+            alert ("Gracias por tu compra!")
         }
     }
     else {
         alert ("ERROR! Invalido")
-    }
-
-    //AGREGAR PRODUCTO 
-    let productosCatalogo = [expansionFama, expansionIsla, packCine, packMsch]
-    //Funcion
-    function agregarPack() {
-        productosCatalogo.push(packMascota)
     }
