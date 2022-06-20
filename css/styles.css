@@ -1,6 +1,6 @@
 
 /*HEADER*/
-.header {
+.head {
     background-image: url(../gallery/bgsims.jpg);
     background-size: cover;
 }
@@ -48,7 +48,7 @@
 .btnBuySims:hover{
     width: 16%;
 }
-/*SECTION*/
+/*SECTIONn inicio*/
 .backgroundWhite {
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@
     align-items: center;
     margin-top: 20px;
 }
-.tituloWhite {
+.tituloComunidad {
     margin-top: 30px;
 }
 .boton {
@@ -75,7 +75,8 @@
     color: rgb(17, 0, 255);
 }
 .tituloExpansiones {
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 /*EXPANSIONES*/
 .expansiones {
@@ -100,4 +101,73 @@
 .expEco:hover {
     width: 28%;
     box-shadow: 0px 4px 4px rgb(116, 115, 115);
+}
+ /*PAGINA TIENDA */ 
+.containerJuego {
+    background-color: rgb(73, 36, 97);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+.tituloTienda {
+    margin-top: 90px;
+    margin-left: 30px;
+    text-align: center;
+    width: 40%;
+    color: white;
+    font-size: 50px;
+}
+.juegoBase {
+    align-self: center;
+    margin: 30px;
+    box-shadow: 3px 4px 4px rgb(39, 38, 38);
+}
+/* BOTON */
+
+.btnBuySimsBase {
+    display: block;
+    position: absolute;
+    right: 300px;
+    bottom: 250px;
+    background-color: skyblue;
+    border: white;
+    height: 8%;
+    width: 15%;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgb(116, 115, 115);
+    font-size: 20px;
+    font-weight: bold;
+    color: purple;
+}
+.btnPrecio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btnBuySimsExp {
+    background-color: skyblue;
+    border: white;
+    height: 30%;
+    width: 10%;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgb(116, 115, 115);
+}
+/*EXPANSIONES */
+.expansionesSims, .packAcc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 80%;
+}
+.expPrecio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+.pkCine, .pkMasc, .pkMosc{
+    width: 25%;
+    height: 100%;
 }
