@@ -1,5 +1,5 @@
 
-/*HEADER*/
+/*HEADER INICIO*/
 .head {
     background-image: url(../gallery/bgsims.jpg);
     background-size: cover;
@@ -18,12 +18,33 @@
 .navbar-nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    
+    justify-content: space-evenly;
 }
 .nav-link {
     text-align: center;
     margin-left: 100px;
+}
+.carrito {
+    display: block;
+    position: relative;
+}
+.buttonPay {
+    transition-duration: 0.4s;
+    padding: 7px 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    border: 2px solid #818a82;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    margin-top: 5px;
+}
+.buttonPay:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
 .simsLogo {
     height: 5%;
@@ -33,7 +54,7 @@
     display: block;
     position: relative;
     left: 18px;
-    top: 230px;
+    top: 200px;
     height: 10%;
     width: 15%;
     font-size: 20px;
@@ -78,7 +99,37 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
+/* FORMULARIO INICIO*/
+form {
+    margin: 30px;
+}
+input {
+    border: 2px solid rgb(53, 168, 153);
+    border-radius: 4px;
+}
+.btnSubmit{
+        transition-duration: 0.4s;
+        border-radius: 4px;
+        background-color: white;
+        padding: 5px 8px;
+        margin-left: 10px;
+}
+.btnSubmit:hover {
+        background-color: #4c7faf; 
+        color: white;
+}
+#result {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+}
 /*EXPANSIONES*/
+h3 {
+    display: block;
+    padding-top:2px ;
+    text-align: center;
+}
 .expansiones {
     display: flex;
     flex-direction: row;
@@ -102,7 +153,8 @@
     width: 28%;
     box-shadow: 0px 4px 4px rgb(116, 115, 115);
 }
- /*PAGINA TIENDA */ 
+ /*---------PAGINA TIENDA------------------- */ 
+ /* PRINCIPAL----------- */
 .containerJuego {
     background-color: rgb(73, 36, 97);
     display: flex;
@@ -122,6 +174,11 @@
     align-self: center;
     margin: 30px;
     box-shadow: 3px 4px 4px rgb(39, 38, 38);
+    transition: width 0.5s;
+}
+.juegoBase:hover {
+    width: 25%;
+    box-shadow: 0px 4px 4px rgb(116, 115, 115);
 }
 /* BOTON */
 
@@ -129,7 +186,7 @@
     display: block;
     position: absolute;
     right: 300px;
-    bottom: 250px;
+    bottom: 230px;
     background-color: skyblue;
     border: white;
     height: 8%;
@@ -140,34 +197,54 @@
     font-weight: bold;
     color: purple;
 }
-.btnPrecio {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+/*----------------EXPANSIONES TIENDA---------------*/
+/* Titulos Expansiones y packs */
+.tituloExpansiones {
+    text-align: center;
 }
-.btnBuySimsExp {
-    background-color: skyblue;
-    border: white;
-    height: 30%;
-    width: 10%;
-    padding: 10px;
-    box-shadow: 0px 4px 4px rgb(116, 115, 115);
+/* Productos */
+
+/* Boton */
+.buttonAdd {
+    transition-duration: 0.4s;
+    padding: 7px 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    border: 2px solid #818a82;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    margin-top: 5px;
 }
-/*EXPANSIONES */
-.expansionesSims, .packAcc {
+
+.buttonAdd:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+
+.contenedorPagina {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 80%;
 }
-.expPrecio {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
+.productContainer {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    position: relative;
 }
-.pkCine, .pkMasc, .pkMosc{
-    width: 25%;
-    height: 100%;
+.productContainer:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.productContainer, img {
+    width: 300px;
+}
+img {
+    width: 290px;
 }
