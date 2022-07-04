@@ -79,7 +79,7 @@ const actualizarCarrito = () => {
         <button onclick="eliminarDelCarrito(${exp.id})" class="botonEliminar"><span><i class="fas fa-trash-alt"></i></span></button>
         `
         contenedorCarrito.appendChild(tr)
-        localStorage.setItem('carrito', JSON.stringify(carrito))
+        localStorage.setItem('carrito', JSON.stringify(carrito)) //convierto en string los objetos de carrito
     })
     precioTotal.innerText = carrito.reduce((acc, exp) => acc + exp.cantidad * exp.precio, 0) //cuando se sume una expansion al carrito, se actualizará el total de compra
 }
