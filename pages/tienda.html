@@ -26,7 +26,28 @@
                   <a class="nav-link active" href="../index.html">Inicio</a>
                   <a class="nav-link" href="../pages/tienda.html">Tienda</a>
                 </div>
-                <button class="buttonPay" id="payButton"><i class="fa-solid fa-cart-shopping carrito"></i></button>
+                  <ul>
+                    <li class="submenu">
+                      <button class="buttonPay" id="payButton"><i class="fa-solid fa-cart-shopping carrito"></i></button>
+                            <div id="carrito"> 
+                                    <table id="listaCarrito">
+                                        <thead>
+                                            <tr class="tituloTable">
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                    <p class="precioExpansion">Total: $<span id="precioTotal"></span></p>
+                                    <a href="#" id="vaciarCarrito" class="button1">Vaciar Carrito</a>
+                            </div>
+                    </li>
+                </ul>
+              </div>
               </div>
             </div>
           </nav>
@@ -35,61 +56,21 @@
     <!-- Principal -->
     <div class="containerJuego">
     <h1 class="tituloTienda" >Obten el juego base para empezar a jugar!</h1>
-    <button class="btn btnBuySimsBase textBuySims" onclick="nuevoProducto('Juego Base', 1000)">Comprar</button>
+    <button class="btn btnBuySimsBase textBuySims">Comprar</button>
     <img src="../gallery/sims-base.png" alt="juegobase" class=" juegoBase">
 </div>
 <!-- Inicio tienda -->
-<h1 class="tituloExpansiones">También puedes disfrutar de expansiones</h1>
+<h1 class="tituloExpansiones">También puedes disfrutar de Expansiones y sus Accesorios</h1>
 
-<div class="contenedorPagina">
-<!-- Expansion Rumbo a la fama -->
-<div class="productContainer">
-  <h3 id="nombre">Rumbo a la Fama</h3>
-    <img src="../gallery/exp-fama.png" alt="fama">
-    <h2 id="precio">$1.550,00</h2>
-    <button class="buttonAdd" id="buttonAgr" onclick="nuevoProducto('Rumbo a la Fama', 1550)">Agregar</button>
+<div class="container" id="contenedorExp">
 </div>
-<!-- Expansion Vida de Universidad -->
-<div class="productContainer">
-  <h3 id="nombre">Vida en la Universidad</h3>
-  <img src="../gallery/exp-univ.png" alt="universidad">
-    <h2 id="precio">$1.500,00</h2>
-    <button class="buttonAdd" id="buttonAgr" onclick="nuevoProducto('Universidad', 1500)">Agregar</button>
-</div>
-<!-- Expansion Vida en la Isla -->
-<div class="productContainer">
-  <h3 id="nombre">Vida en la Isla</h3>
-  <img src="../gallery/exp-isla.png" alt="isla">
-    <h2 id="precio">$1.700,00</h2>
-    <button class="buttonAdd" id="buttonAgr" onclick="nuevoProducto('Vida en la Isla', 1700)">Agregar</button>
-</div>
-</div>
-
-<!-- PACKS de Accesorios -->
-<h1 class="tituloExpansiones">O de sus packs de accesorios</h1>
-<div class="contenedorPagina">
-<!-- Pack Cine -->
+<!-- Pack Cine 
 <div class="productContainer">
   <h3 id="nombre">Noche de Cine</h3>
   <img src="../gallery/pk-cine.png" class="pkCine" alt="cine">
     <h2 id="precio">$900,00</h2>
-    <button class="buttonAdd" id="buttonAgr" onclick="nuevoProducto('Noche de Cine', 900)">Agregar</button>
-</div>
-<!-- Pack Mascotas -->
-<div class="productContainer">
-  <h3 id="nombre">Mascotas</h3>
-  <img src="../gallery/pk-mascota.png" class="pkMasc" alt="mascotas">
-    <h2 id="precio">$1.050,00</h2>
-    <button class="buttonAdd" id="buttonAgr" onclick="nuevoProducto('Mascotas', 1050)">Agregar</button>
-</div>
-<!-- Pack Moschino -->
-<div class="productContainer">
-  <h3 id="nombre">Moschino</h3>
-  <img src="../gallery/pk-mosc.png" class="pkMosc" alt="mosc">
-    <h2 id="precio">$870,00</h2>
-    <button class="buttonAdd" id="buttonAgr" onclick="nuevoProducto('Moschino', 870)">Agregar</button>
-</div>
-</div>
+    <button class="buttonAdd" id="buttonAgr" " >Agregar</button>
+</div>-->
 <!-- JS -->
 <script src="../js/tienda.js"></script>
 </body>
