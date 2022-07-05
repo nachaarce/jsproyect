@@ -1,5 +1,5 @@
 //Cree dos eventos. 
-//1 - El usuario se une a la ''comunidad'' ingresando su nombre y email. (se encuentra en otro archivo js)
+//1 - El usuario se une a la ''comunidad'' ingresando su nombre y email. 
 //2- El usuario agrega productos al carrito y se van sumando. 
 
 //Evento n° 1: 
@@ -7,6 +7,7 @@
 
 let form1 = document.getElementById('form1')
 let result = document.getElementById('result')
+let btnUnirse = document.getElementById('btnUnirse')
 
 form1.addEventListener("submit",validarUsuario);
 
@@ -16,9 +17,18 @@ function validarUsuario(e){
     let nombre = document.getElementById("inputNombre").value;
     let email = document.getElementById("inputEmail").value;
 
-    if(nombre == ""){
-        result.innerText ="Es inválido. Ingresa tus datos"
+    if(nombre == ""){  //Si el usuario no ingresa sus datos se devuelve un alert con error. Hago uso de Sweet Alert
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes ingresar tus daots',
+        })
     }else{
-        result.innerText =`Bienvenida/o a la comunidad ${nombre} !`
+        Swal.fire({ //Si el usuario ingresa sus datos, se devuelve un alert exitoso
+            icon: 'success',
+            title: 'Fantástico!',
+            text: `Bienvenida/o a la comunidad ${nombre}`,
+        })
     }
 }
+

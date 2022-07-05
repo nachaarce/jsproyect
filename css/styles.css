@@ -300,13 +300,24 @@ th {
     transition-duration: 0.4s;
 
 }
-h4 {
-    margin: 10px;
-}
 
 #vaciarCarrito:hover {
-    background-color: #3a423b; /* Green */
+    background-color: #3a423b; 
     color: white;
+}
+#finalizarCompra {
+    text-decoration: none;
+    padding: 5px 15px;
+    color: black;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+#finalizarCompra:hover {
+    background-color: #409b4c; 
+    color: white;
+}
+h4 {
+    margin: 10px;
 }
 .expansionEnCarrito {
     display: flex;
