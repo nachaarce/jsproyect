@@ -129,6 +129,8 @@ const eliminarDelCarrito = (expId) => {
             showConfirmButton: false,
             timer: 1500
         })
+        carrito.length = 0 
+        actualizarCarrito() 
     })
     
 
