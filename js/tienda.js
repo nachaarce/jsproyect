@@ -90,6 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+
+
+
+
 //Eliminar item de carrito 
 const eliminarDelCarrito = (expId) => {
     Toastify({

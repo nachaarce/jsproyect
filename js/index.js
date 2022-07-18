@@ -21,7 +21,7 @@ function validarUsuario(e){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Debes ingresar tus daots',
+            text: 'Debes ingresar tus datos',
         })
     }else{
         Swal.fire({ //Si el usuario ingresa sus datos, se devuelve un alert exitoso
@@ -32,3 +32,31 @@ function validarUsuario(e){
     }
 }
 
+
+//Se muestra información de las expansiones que aparecen en la primer pagina.
+function programarBtnInfo () {
+    const btnInfo = document.getElementById('btnInfo');
+    btnInfo.addEventListener("click", () => {
+        mostrarDatos()
+    })
+}
+
+function mostrarDatos () {
+fetch ('/js/data.json')
+.then ((res) => res.json())
+.then ((data) => mostrarListDatos(data))
+}
+function mostrarListDatos (datosLista) {
+const contenedorLista = document.getElementById("contenedorLista")
+datosLista.forEach((dato) => {
+    mostrarDatos(dato, container)
+})
+
+}
+function mostrarDatos (datos, div)
+{
+    const divDato = document.createElement("div");
+    divDato.innerHTML = `<h4>${datos.title}</h4>
+                        <p>${datos.body}</p>`
+    div.appendChild(divDato)
+}
