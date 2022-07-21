@@ -43,7 +43,7 @@
     margin-top: 5px;
 }
 .buttonPay:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     color: white;
 }
 .simsLogo {
@@ -101,6 +101,13 @@
 }
 #btnInfo {
     margin: 20px;
+    background-color: #008CBA;
+    color: white;
+    padding: 5px 15px;
+    border: 2px solid rgb(73, 70, 70);
+    border-radius: 4px ;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 /* FORMULARIO INICIO*/
 form {
@@ -156,6 +163,31 @@ h3 {
     width: 28%;
     box-shadow: 0px 4px 4px rgb(116, 115, 115);
 }
+/*INFO DE EXPANSIONES INICIO */
+.contenedorTabla {
+    display: flex;
+flex-direction: row;
+justify-content: space-between; 
+}
+
+.tablaInfo { 
+    align-items: flex-start;
+    background-color: aquamarine;
+    border: 2px solid white;
+    padding: 10px 10px;
+    margin: 20px;
+    float: left;
+    width: 400px;
+}
+.tablaInfo:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+h6, p {
+    text-align: center;
+}
+p {    padding: 5px;}
+
+
  /*---------PAGINA TIENDA------------------- */ 
  /* PRINCIPAL----------- */
 .containerJuego {
@@ -260,7 +292,7 @@ ul {
 #listaCarrito, #carrito {
     display: none;
 }
-.submenu:hover #carrito{ 
+/* .submenu:hover #carrito{ 
     display: block;
     position: absolute;
     right: 0;
@@ -281,7 +313,7 @@ ul {
     padding: 17px;
     max-height: 1380px;
     max-width: 250px;
-}
+} */
 #listaCarrito {
     text-align: center;
 }

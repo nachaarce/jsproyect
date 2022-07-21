@@ -1,0 +1,17 @@
+[
+{"id": 0,
+"nombre": "Vida en el Pueblo",
+"titulo": "Una increible expanasion para armar tu vida de campo.",
+"desc": "Las vacas dan leche fresca (¡y de sabores!) y las gallinas ponen huevos en el gallinero. En el bosque, busca conejos, zorros y pájaros salvajes, y gánate su confianza para que te ayuden en el jardín y te hagan regalos esporádicos."
+},
+{ "id": 1,
+"nombre": "Escapada en la Nieve", 
+"titulo": "Escapate en la nive con tu familia y amigos!",
+"desc": "Pon a prueba tu destreza y tu resistencia con actividades de montaña. Ponte los esquís, súbete a la tabla de snow o acurrucate con alguien en un trineo para deslizarte ladera abajo. ¿Que prefieres ascender? Desarrolla tu habilidad Escalada e intenta alcanzar la cima de la montaña."
+},
+{ "id": 2,
+"nombre": "Vida Ecológica",
+"titulo": "Descubre los beneficios de la ecología",
+"desc": " ¡Reduce, reutiliza y recicla! Produce tu propia electricidad y tu propia agua con paneles solares, turbinas eólicas y colectores de rocío o cultiva tu propia comida en un nuevo jardín vertical para controlar tu impacto en el mundo. "
+}
+]

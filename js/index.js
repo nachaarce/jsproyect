@@ -32,31 +32,28 @@ function validarUsuario(e){
     }
 }
 
-
+const contenedorTabla = document.getElementById ('contenedorTabla')
 //Se muestra información de las expansiones que aparecen en la primer pagina.
-function programarBtnInfo () {
-    const btnInfo = document.getElementById('btnInfo');
+function infoExpansiones () { 
+    let btnInfo = document.getElementById ('btnInfo')
     btnInfo.addEventListener("click", () => {
-        mostrarDatos()
+        mostrarInfo() })
+}
+infoExpansiones ()
+function mostrarInfo () {
+    fetch ('/expansiones.json')
+    .then ((res) => res.json ())
+    .then ((info) => {
+        info.forEach ((expId) => {
+            const div = document.createElement ('div')
+            div.classList.add ('tablaInfo')
+            div.innerHTML = `
+            <h3>${expId.nombre}</h3>
+            <h6>${expId.titulo}</h6>
+            <p>${expId.desc}</p>
+            `
+        contenedorTabla.appendChild(div)
+        } )
     })
 }
 
-function mostrarDatos () {
-fetch ('/js/data.json')
-.then ((res) => res.json())
-.then ((data) => mostrarListDatos(data))
-}
-function mostrarListDatos (datosLista) {
-const contenedorLista = document.getElementById("contenedorLista")
-datosLista.forEach((dato) => {
-    mostrarDatos(dato, container)
-})
-
-}
-function mostrarDatos (datos, div)
-{
-    const divDato = document.createElement("div");
-    divDato.innerHTML = `<h4>${datos.title}</h4>
-                        <p>${datos.body}</p>`
-    div.appendChild(divDato)
-}
