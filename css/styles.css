@@ -292,7 +292,7 @@ ul {
 #listaCarrito, #carrito {
     display: none;
 }
-/* .submenu:hover #carrito{ 
+.submenu:hover #carrito{ 
     display: block;
     position: absolute;
     right: 0;
@@ -302,6 +302,7 @@ ul {
     padding: 20px;
     min-height: 400px;
     min-width: 500px;
+    transition-duration: 20s;
     }
 .submenu:hover #listaCarrito{ 
     display: block;
@@ -313,7 +314,8 @@ ul {
     padding: 17px;
     max-height: 1380px;
     max-width: 250px;
-} */
+    transition-duration: 20s;
+} 
 #listaCarrito {
     text-align: center;
 }

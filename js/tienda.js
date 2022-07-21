@@ -98,6 +98,7 @@ const eliminarDelCarrito = (expId) => {
         className: "info",
         style: {
         background: "red", 
+        timer: 1000
         }
     }).showToast(); //TOASTIFY para notificarle al usuario que su expansion se eliminó.
     const item = carrito.find((exp) => exp.id === expId)
@@ -113,6 +114,7 @@ const eliminarDelCarrito = (expId) => {
             className: "info",
             style: {
             background: "red",
+            timer: 900
             }
         }).showToast(); //Utilizo TOASTIFY para notificar que se realizó la acción indicada.
         carrito.length = 0 
@@ -128,9 +130,13 @@ const eliminarDelCarrito = (expId) => {
             icon: 'success',
             title: 'Tu compra fue realizada',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1000
         })
         carrito.length = 0 
         actualizarCarrito() 
     })
     
+const clickCarrito = document.getElementById('payButton')
+clickCarrito.addEventListener ("click", () => {
+    actualizarCarrito()
+})

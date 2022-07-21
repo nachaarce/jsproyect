@@ -41,7 +41,7 @@ function infoExpansiones () {
 }
 infoExpansiones ()
 function mostrarInfo () {
-    fetch ('/expansiones.json')
+    fetch ('./expansiones.json')
     .then ((res) => res.json ())
     .then ((info) => {
         info.forEach ((expId) => {
