@@ -18,7 +18,7 @@ let stockExpansiones = [
     {id: 4 , nombre:  "Vida en la Isla"  ,cantidad:  1  ,  precio: 1700 ,  img: '../gallery/exp-isla.png' },
     {id: 5, nombre: "Noche de Cine"   ,cantidad:  1   ,  precio:  900  ,  img: '../gallery/pk-cine.png'  },      
     {id: 6, nombre: "Mascotas"   , cantidad: 1  ,  precio: 1050 ,  img: '../gallery/pk-mascota.png' },       
-    {id: 7, nombre: "Moschino"   ,cantidad: 1  ,  precio:  870  ,  img:  '../gallery/pk-mosc.png'  },
+    {id: 7, nombre: "Moschino"   ,cantidad: 1  ,  precio:  870  ,  img:  '../gallery/pk-mosc.png'  }
 ]
 
 //Creo un foreach para recorrer mis expansiones y crear un div en HTML con sus datos e imagen 
@@ -136,7 +136,3 @@ const eliminarDelCarrito = (expId) => {
         actualizarCarrito() 
     })
     
-const clickCarrito = document.getElementById('payButton')
-clickCarrito.addEventListener ("click", () => {
-    actualizarCarrito()
-})
