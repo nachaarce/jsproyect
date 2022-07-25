@@ -40,8 +40,13 @@ function infoExpansiones () {
         mostrarInfo() })
 }
 infoExpansiones ()
+
+let falso = new Boolean(false);
+
 function mostrarInfo () {
+    if (falso) {
     fetch ('./expansiones.json')
+    .then(falso=false)
     .then ((res) => res.json ())
     .then ((info) => {
         info.forEach ((expId) => {
@@ -53,7 +58,13 @@ function mostrarInfo () {
             <p>${expId.desc}</p>
             `
         contenedorTabla.appendChild(div)
+        
         } )
     })
 }
+else {
+    falso = true;
+    }
+}
+
 
