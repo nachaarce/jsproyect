@@ -63,7 +63,7 @@ function mostrarInfo () {
     })
 }
 else {
-    falso = true;
+    true;
     }
 }
 
