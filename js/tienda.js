@@ -38,6 +38,14 @@ stockExpansiones.forEach((expansion) => {
      //le hago un get element by id (el de buttonAgr) Obtengo el elemento y a dicho elemento le agrego
      //el addEventListener
     boton.addEventListener('click', () => {
+        Toastify({
+            text: "Se añadió al carrito",
+            className: "info",
+            style: {
+            background: "green", 
+            duration: 1000
+            }
+        }).showToast();
         agregarCarrito(expansion.id)
         //esta funcion ejecuta el buttonAgr el carrito con la id del producto
     })
@@ -56,7 +64,8 @@ const agregarCarrito = (expId) => {
         })
     } else { //EN CASO DE QUE NO ESTÉ, Agrego la expansino al carrito.
         const item = stockExpansiones.find((exp) => exp.id === expId)
-        carrito.push(item)    //Cuando obtengo el id, hago un push para agregarlo al carrito
+        carrito.push(item) 
+           //Cuando obtengo el id, hago un push para agregarlo al carrito
     }
     //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
     //el carrito y se actualiza el mismo. 
@@ -98,7 +107,7 @@ const eliminarDelCarrito = (expId) => {
         className: "info",
         style: {
         background: "red", 
-        timer: 1000
+        duration: 1000
         }
     }).showToast(); //TOASTIFY para notificarle al usuario que su expansion se eliminó.
     const item = carrito.find((exp) => exp.id === expId)
@@ -114,7 +123,7 @@ const eliminarDelCarrito = (expId) => {
             className: "info",
             style: {
             background: "red",
-            timer: 900
+            duration: 1000
             }
         }).showToast(); //Utilizo TOASTIFY para notificar que se realizó la acción indicada.
         carrito.length = 0 

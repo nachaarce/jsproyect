@@ -63,8 +63,13 @@ function mostrarInfo () {
     })
 }
 else {
-    true;
+    falso = true;
     }
 }
-
-
+//Borrar Informacion 
+btnInfo.addEventListener("click" , () => {
+    borrarInfo() 
+})
+function borrarInfo () {
+        contenedorTabla.innerHTML = ""
+}

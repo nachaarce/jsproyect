@@ -289,6 +289,7 @@ img {
 ul {
     list-style: none;
 }
+
 #listaCarrito, #carrito {
     display: none;
 }
@@ -302,7 +303,7 @@ ul {
     padding: 20px;
     min-height: 400px;
     min-width: 500px;
-    transition-duration: 20s;
+    transition-duration: 10s;
     }
 .submenu:hover #listaCarrito{ 
     display: block;
@@ -314,8 +315,8 @@ ul {
     padding: 17px;
     max-height: 1380px;
     max-width: 250px;
-    transition-duration: 20s;
-} 
+    transition-duration: 10s;
+}   
 #listaCarrito {
     text-align: center;
 }
