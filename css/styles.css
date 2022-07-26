@@ -286,6 +286,13 @@ img {
     width: 290px;
 }
 /*CARRITO */
+.buttonLink {
+    text-decoration: none;
+    color: black;
+}
+.buttonLink:hover {
+    color:white;
+}
 ul {
     list-style: none;
 }

@@ -144,4 +144,3 @@ const eliminarDelCarrito = (expId) => {
         carrito.length = 0 
         actualizarCarrito() 
     })
-    
